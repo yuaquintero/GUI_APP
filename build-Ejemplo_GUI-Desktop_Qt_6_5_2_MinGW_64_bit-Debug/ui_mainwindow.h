@@ -11,6 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -25,11 +27,14 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *btn_Aceptar;
     QLabel *lbl_Bienvenida;
-    QLineEdit *le_nombre;
-    QLabel *lbl_nombre;
-    QLabel *lbl_mensaje;
+    QLineEdit *le_x;
+    QPushButton *btn_Aceptar;
+    QGraphicsView *graphicsView;
+    QLCDNumber *lcdNumber;
+    QLineEdit *le_y;
+    QLabel *label;
+    QLabel *label_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -40,30 +45,36 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        btn_Aceptar = new QPushButton(centralwidget);
-        btn_Aceptar->setObjectName("btn_Aceptar");
-        btn_Aceptar->setGeometry(QRect(290, 290, 91, 31));
-        QFont font;
-        font.setPointSize(11);
-        btn_Aceptar->setFont(font);
         lbl_Bienvenida = new QLabel(centralwidget);
         lbl_Bienvenida->setObjectName("lbl_Bienvenida");
         lbl_Bienvenida->setGeometry(QRect(280, 30, 191, 51));
+        QFont font;
+        font.setPointSize(21);
+        lbl_Bienvenida->setFont(font);
+        le_x = new QLineEdit(centralwidget);
+        le_x->setObjectName("le_x");
+        le_x->setGeometry(QRect(730, 90, 51, 22));
+        btn_Aceptar = new QPushButton(centralwidget);
+        btn_Aceptar->setObjectName("btn_Aceptar");
+        btn_Aceptar->setGeometry(QRect(680, 200, 91, 31));
         QFont font1;
-        font1.setPointSize(21);
-        lbl_Bienvenida->setFont(font1);
-        le_nombre = new QLineEdit(centralwidget);
-        le_nombre->setObjectName("le_nombre");
-        le_nombre->setGeometry(QRect(330, 220, 113, 22));
-        lbl_nombre = new QLabel(centralwidget);
-        lbl_nombre->setObjectName("lbl_nombre");
-        lbl_nombre->setGeometry(QRect(170, 220, 151, 31));
-        QFont font2;
-        font2.setPointSize(13);
-        lbl_nombre->setFont(font2);
-        lbl_mensaje = new QLabel(centralwidget);
-        lbl_mensaje->setObjectName("lbl_mensaje");
-        lbl_mensaje->setGeometry(QRect(170, 380, 331, 21));
+        font1.setPointSize(11);
+        btn_Aceptar->setFont(font1);
+        graphicsView = new QGraphicsView(centralwidget);
+        graphicsView->setObjectName("graphicsView");
+        graphicsView->setGeometry(QRect(30, 90, 632, 402));
+        lcdNumber = new QLCDNumber(centralwidget);
+        lcdNumber->setObjectName("lcdNumber");
+        lcdNumber->setGeometry(QRect(90, 40, 64, 23));
+        le_y = new QLineEdit(centralwidget);
+        le_y->setObjectName("le_y");
+        le_y->setGeometry(QRect(730, 140, 51, 22));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(710, 90, 21, 16));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(710, 140, 21, 16));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -81,10 +92,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        btn_Aceptar->setText(QCoreApplication::translate("MainWindow", "Aceptar", nullptr));
         lbl_Bienvenida->setText(QCoreApplication::translate("MainWindow", "Ejemplo GUI", nullptr));
-        lbl_nombre->setText(QCoreApplication::translate("MainWindow", "Ingrese su nombre", nullptr));
-        lbl_mensaje->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
+        btn_Aceptar->setText(QCoreApplication::translate("MainWindow", "Aceptar", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
     } // retranslateUi
 
 };

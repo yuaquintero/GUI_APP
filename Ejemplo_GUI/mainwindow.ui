@@ -14,24 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_Aceptar">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>290</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Aceptar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="lbl_Bienvenida">
     <property name="geometry">
      <rect>
@@ -50,45 +32,88 @@
      <string>Ejemplo GUI</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="le_nombre">
+   <widget class="QLineEdit" name="le_x">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>220</y>
-      <width>113</width>
+      <x>730</x>
+      <y>90</y>
+      <width>51</width>
       <height>22</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_nombre">
+   <widget class="QPushButton" name="btn_Aceptar">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>220</y>
-      <width>151</width>
+      <x>680</x>
+      <y>200</y>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>13</pointsize>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Ingrese su nombre</string>
+     <string>Aceptar</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_mensaje">
+   <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>380</y>
-      <width>331</width>
-      <height>21</height>
+      <x>30</x>
+      <y>90</y>
+      <width>632</width>
+      <height>402</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="le_y">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>140</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>90</y>
+      <width>21</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>.</string>
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>140</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
     </property>
    </widget>
   </widget>
